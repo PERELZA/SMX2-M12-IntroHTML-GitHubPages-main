@@ -4,105 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horari de Classe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #FFD700;
+        }
+
+        td {
+            background-color: #F0F0F0;
+        }
+
+        .hour {
+            background-color: #F0F0F0;
+            font-weight: bold;
+        }
+
+        .yellow { background-color: #FFFF99; }
+        .blue { background-color: #ADD8E6; }
+        .light-blue { background-color: #0000FF; color: white; }
+        .light-red { background-color: #FFDDC1; }
+        .red { background-color: #FF0000; color: white; }
+        .pink { background-color: #FFB6C1; }
+        .green { background-color: #90EE90; }
+        .magenta { background-color: #FF00DD; color: white; }
+        .purple { background-color: #7E096D; color: white; }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <!-- Títol de la taula -->
-    <table style="width: 100%; text-align: center; border: 1px solid black; border-collapse: collapse;">
-        <caption><strong>SMX2 (tarda) 301</strong></caption> <!-- Títol de la taula -->
-
-        <!-- Fila de dies de la setmana -->
-        <tr>
-            <th style="border: 1px solid black; background-color: #FFD700;"></th>
-            <th style="border: 1px solid black; background-color: #FFD700;">Dilluns</th>
-            <th style="border: 1px solid black; background-color: #FFD700;">Dimarts</th>
-            <th style="border: 1px solid black; background-color: #FFD700;">Dimecres</th>
-            <th style="border: 1px solid black; background-color: #FFD700;">Dijous</th>
-            <th style="border: 1px solid black; background-color: #FFD700;">Divendres</th>
-        </tr>
-
-        <!-- Horaris -->
-        <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">15:00 - 15:55</td>
-            <td style="border: 1px solid black; background-color: #FFDDC1;" rowspan="2">M4 S.Op.Xa. 301 <br> Nuri/Ale</td>
-            <td style="border: 1px solid black; background-color: #0000ff;" rowspan="2 ">M12.1 Síntesi 301 <br> Agnès/Alberto</td>
-            <td style="border: 1px solid black; background-color: #D3D3D3;"> </td>
-            <td style="border: 1px solid black; background-color: #90EE90;" rowspan="2">M11 Anglès 301 <br> Alex</td>
-            <td style="border: 1px solid black; background-color: #ADD8E6;" rowspan="2">M8 web 301 <br> Alberto/Fàtima</td>
-        </tr>
-
-    
-        
-        <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">15:55 - 16:50</td>
-
-            <td style="border: 1px solid black; background-color: #D3D3D3;"> </td>
-            <td style="border: 1px solid black; background-color: #D3D3D3;"> </td>
-            
-        
-        </tr>
-        
-        
+    <table>
+        <caption>SMX2 (tarda) 301</caption>
 
         <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">16:50 - 17:45</td>
-            <td style="border: 1px solid black; background-color: #e1ff00;" rowspan="2">M12.2 Síntesi 301 <br> Gerard/Pedro</td>
-            <td style="border: 1px solid black; background-color: #FFDDC1;"rowspan="2">M4 S.Op.Xa. 301 <br> Nuri/Ale</td>
-            <td style="border: 1px solid black; background-color: #ff0000;" rowspan="2" >M7 Serveis 301 <br> Pedro</td>
-            <td style="border: 1px solid black; background-color: #FFB6C1;" rowspan="2">M6-45 Seguridad 301 <br> Velasco</td>
-            <td style="border: 1px solid black; background-color: #ff00dd;">M11 Anglès 301 <br> Alex</td>
+            <th></th>
+            <th>Dilluns</th>
+            <th>Dimarts</th>
+            <th>Dimecres</th>
+            <th>Dijous</th>
+            <th>Divendres</th>
         </tr>
 
         <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">17:45 - 18:40</td>
-
-
-            <td style="border: 1px solid black; background-color: #7e096d;">Tutoria 301 <br> Alex</td>
-        
+            <td class="hour">15:00 - 15:55</td>
+            <td class="light-red" rowspan="2">M4 S.Op.Xa. 301<br>Nuri/Ale</td>
+            <td class="light-blue" rowspan="2">M12.1 Síntesi 301<br>Agnès/Alberto</td>
+            <td></td>
+            <td class="green" rowspan="2">M11 Anglès 301<br>Alex</td>
+            <td class="blue" rowspan="2">M8 web 301<br>Alberto/Fàtima</td>
         </tr>
 
-<!-- Hora del pati -->
-<tr><td style="border: 1px solid black; background-color: #F0F0F0;">18:40 - 19:10</td>
-    <td colspan="5" style="border: 1px solid black; background-color: #E0E0E0;">Hora del Pati</td>
-</tr>
-
-        <!-- Final del dia -->
         <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">19:10 - 20:05</td>
-            <td style="border: 1px solid black; background-color: #ff0000;">M7 Serveis 301 <br> Pedro</td>
-            <td style="border: 1px solid black; background-color: #e1ff00;">M12.2 Síntesi 301 <br> Gerard/Pedro</td>
-            <td style="border: 1px solid black; background-color: #ADD8E6;">M8 web 301 <br> Alberto</td>
-            <td style="border: 1px solid black; background-color: #ff0000;"rowspan="2">M7 Serveis 301 <br> Pedro</td>
-            <td style="border: 1px solid black; background-color: #E0E0E0;"></td>
+            <td class="hour">15:55 - 16:50</td>
+            <td></td>
         </tr>
+
         <tr>
-            <td style="border: 1px solid black; background-color: #F0F0F0;">20:05 - 21:00</td>
-            <td style="border: 1px solid black; background-color: #e0e0e0;"></td>
-            <td style="border: 1px solid black; background-color: #e1ff00;">M12.2 Síntesi 301 <br> Pedro</td>
-            <td style="border: 1px solid black; background-color: #0000ff;">M12.1 Síntesi 301 <br> Agnes/Alberto</td>
-            <td style="border: 1px solid black; background-color: #E0E0E0;"></td>
-            
+            <td class="hour">16:50 - 17:45</td>
+            <td class="yellow" rowspan="2">M12.2 Síntesi 301<br>Gerard/Pedro</td>
+            <td class="light-red" rowspan="2">M4 S.Op.Xa. 301<br>Nuri/Ale</td>
+            <td class="red" rowspan="2">M7 Serveis 301<br>Pedro</td>
+            <td class="pink" rowspan="2">M6-45 Seguridad 301<br>Velasco</td>
+            <td class="magenta">M11 Anglès 301<br>Alex</td>
+        </tr>
+
+        <tr>
+            <td class="hour">17:45 - 18:40</td>
+            <td class="purple">Tutoria 301<br>Alex</td>
+        </tr>
+
+        <tr>
+            <td class="hour">18:40 - 19:10</td>
+            <td colspan="5" style="background-color: #E0E0E0; font-weight: bold;">Hora del Pati</td>
+        </tr>
+
+        <tr>
+            <td class="hour">19:10 - 20:05</td>
+            <td class="red">M7 Serveis 301<br>Pedro</td>
+            <td class="yellow">M12.2 Síntesi 301<br>Gerard/Pedro</td>
+            <td class="blue">M8 web 301<br>Alberto</td>
+            <td class="red" rowspan="2">M7 Serveis 301<br>Pedro</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td class="hour">20:05 - 21:00</td>
+            <td></td>
+            <td class="yellow">M12.2 Síntesi 301<br>Pedro</td>
+            <td class="light-blue">M12.1 Síntesi 301<br>Agnès/Alberto</td>
+            <td></td>
         </tr>
     </table>
-
-    <!-- Explicació d'etiquetes -->
-    <!--
-    <table> Defineix una taula
-    <tr> Defineix una fila
-    <td> Defineix una cel·la dins d'una fila
-    <th> Defineix una cel·la d'encapçalament
-    <caption> Defineix un títol per la taula
-
-    Atributs:
-    colspan: Indica quantes columnes ocupa una cel·la
-    rowspan: Indica quantes files ocupa una cel·la
-    style: Aplica estils en línia a l'element
-
-    Estils:
-    border: Defineix el contorn d'un element
-    border-collapse: Fusiona les vores de la taula
-    text-align: Alinea el text dins de les cel·les
-    width: Amplada de l'element
-    background-color: Color de fons de l'element
-    -->
 </body>
 </html>
